@@ -5,7 +5,7 @@ function contactTemplate(data) {
   let date = moment(data.createdAt).fromNow();
 
   return `
-    <h2>${data.name} was created on ${date}</h2>
+    <h2>${data.Name} was created on ${date}</h2>
   `
 }
 

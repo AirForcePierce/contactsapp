@@ -19,14 +19,15 @@ let Router = Backbone.Router.extend({
   initialize: function(appElement) {
     this.$el = appElement;
 
-    this.todos = new ContactsCollection();
+    this.contacts = new ContactsCollection();
 
     let router = this;
 
-    this.$el.on('click', '.contacts-list-item', function(event) {
+    this.$el.on('click', '.contact-list-item', function(event) {
       let $li = $(event.currentTarget);
-      var todoId = $li.data('contact-id');
+      var contactId = $li.data('contact-id');
       router.navigate(`contacts/${contactId}`);
+      console.log(contactId);
       router.showSpecificContact(contactId);
     });
   },
@@ -67,7 +68,7 @@ let Router = Backbone.Router.extend({
 
     var router = this;
 
-    this.contacts.fetch().then(function(){
+    this.contacts.fetch().then( function(){
 
       router.$el.html( contactsTemplate(router.contacts.toJSON()) );
 

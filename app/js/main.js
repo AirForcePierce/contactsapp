@@ -142,14 +142,15 @@ var Router = _backbone2['default'].Router.extend({
   initialize: function initialize(appElement) {
     this.$el = appElement;
 
-    this.todos = new _contacts_collection2['default']();
+    this.contacts = new _contacts_collection2['default']();
 
     var router = this;
 
-    this.$el.on('click', '.contacts-list-item', function (event) {
+    this.$el.on('click', '.contact-list-item', function (event) {
       var $li = (0, _jquery2['default'])(event.currentTarget);
-      var todoId = $li.data('contact-id');
+      var contactId = $li.data('contact-id');
       router.navigate('contacts/' + contactId);
+      console.log(contactId);
       router.showSpecificContact(contactId);
     });
   },
@@ -227,7 +228,7 @@ function contactTemplate(data) {
 
   var date = (0, _moment2['default'])(data.createdAt).fromNow();
 
-  return '\n    <h2>' + data.name + ' was created on ' + date + '</h2>\n  ';
+  return '\n    <h2>' + data.Name + ' was created on ' + date + '</h2>\n  ';
 }
 
 exports['default'] = contactTemplate;
