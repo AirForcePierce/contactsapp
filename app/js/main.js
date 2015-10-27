@@ -261,7 +261,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 function homeTemplate() {
-  return "\n    <h2>Home page</h2>\n  ";
+  return "\n    <h2>Home page</h2>\n    <h2><a href=\"#contacts\">Contacts</h2>\n\n  ";
 }
 
 exports["default"] = homeTemplate;
