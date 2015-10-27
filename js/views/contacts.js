@@ -10,7 +10,7 @@ function proccessData(data) {
 
 function contactsTemplate(data) {
   return `
-    <h2>Something with Contacts</h2>
+    <h2>My Contacts</h2>
     <ul>${proccessData(data)}</ul>
   `;
 }

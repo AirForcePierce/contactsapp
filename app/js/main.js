@@ -228,7 +228,7 @@ function contactTemplate(data) {
 
   var date = (0, _moment2['default'])(data.createdAt).fromNow();
 
-  return '\n    <h2>' + data.Name + ' was created on ' + date + '</h2>\n  ';
+  return '\n    <div class="profile-image"><a href="#contacts"><i class="fa fa-arrow-left backplz"></i></a><img src="' + data.Image + '"></div>\n    <p><i class="fa fa-user"></i> ' + data.Name + '</p>\n    <p><i class="fa fa-envelope"></i> ' + data.Email + '</p>\n    <p><i class="fa fa-phone"></i> ' + data.PhoneNum + '</p>\n    <p><i class="fa fa-globe"></i> ' + data.Location + '</p>\n  ';
 }
 
 exports['default'] = contactTemplate;
@@ -248,7 +248,7 @@ function proccessData(data) {
 }
 
 function contactsTemplate(data) {
-  return '\n    <h2>Something with Contacts</h2>\n    <ul>' + proccessData(data) + '</ul>\n  ';
+  return '\n    <h2>My Contacts</h2>\n    <ul>' + proccessData(data) + '</ul>\n  ';
 }
 
 exports['default'] = contactsTemplate;
