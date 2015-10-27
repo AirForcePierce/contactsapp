@@ -5,7 +5,11 @@ function contactTemplate(data) {
   let date = moment(data.createdAt).fromNow();
 
   return `
-    <h2>${data.Name} was created on ${date}</h2>
+    <div class="profile-image"><img src="${data.Image}"></div>
+    <p><i class="fa fa-user"></i>${data.Name}</p>
+    <p><i class="fa fa-envelope"></i>${data.Email}</p>
+    <p><i class="fa fa-phone"></i>${data.PhoneNum}</p>
+    <p><i class="fa fa-globe"></i>${data.Location}</p>
   `
 }
 
